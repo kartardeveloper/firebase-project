@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Sign In Authentication and Firebase Realtime Database</title>
+  </head>
+  <body>
+    <div class="create-account__container">
+      <form action="#" class="create-account__form">
+        <div class="input__wrapper">
+          <label for="first-name" class="input-label">First Name</label>
+          <input type="text" class="text-input" id="first-name" required />
+        </div>
+        <div class="input__wrapper">
+          <label for="last-name" class="input-label">Last Name</label>
+          <input type="text" class="text-input" id="last-name" required />
+        </div>
+        <div class="input__wrapper">
+          <label for="job-type" class="input-label">Job Type</label>
+          <input type="text" class="text-input" id="job-type" required />
+        </div>
+        <div class="input__wrapper">
+          <label for="age" class="input-label">Age</label>
+          <input
+            type="number"
+            class="number-input"
+            id="age"
+            min="10"
+            max="80"
+            required
+          />
+        </div>
+        <div class="input__wrapper">
+          <label for="phone-number" class="input-label">Phone Number</label>
+          <input
+            type="number"
+            class="number-input"
+            id="phone-number"
+            min="1111111111"
+            required
+          />
+        </div>
+        <div class="submit__wrapper">
+          <button type="submit" class="submit-btn">Create new account</button>
+        </div>
+      </form>
+    </div>
+    <div class="sign-in__container">
+      <div class="google-mail__data">
+        <figure class="google-mail__img-wrapper">
+          <img alt="mail-thumbnail" class="google-mail__img" />
+        </figure>
+        <div class="google-mail__data-content">
+          <h2 class="user-name"></h2>
+          <p class="user-email"></p>
+        </div>
+      </div>
+      <div class="google-buttons__wrapper">
+        <button class="google__btn" id="google-sign-in__btn">
+          Sign in with Google
+        </button>
+        <button class="google__btn" id="google-sign-out__btn">Sign out</button>
+      </div>
+    </div>
+  </body>
+</html>

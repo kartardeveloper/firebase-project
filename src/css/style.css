@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #222121;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.create-account__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-account__form .input__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.create-account__form .input__wrapper label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.create-account__form .input__wrapper input:not([type="submit"]) {
+  padding: 7px;
+  border: none;
+  border-radius: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.create-account__form .input__wrapper input:focus {
+  border: none;
+  outline: none;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  background: rgb(45, 45, 219);
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.sign-in__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.google-mail__data {
+  display: none;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.google-mail__img-wrapper {
+  width: 70px;
+}
+
+.google-mail__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  margin-bottom: 5px;
+}
+
+.google-buttons__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.google__btn {
+  padding: 13px 16px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  background: rgb(56, 56, 230);
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.google__btn::after,
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.103);
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.google__btn:hover {
+  transform: scale(1.1);
+}
+
+.google__btn:hover::after,
+.submit-btn:hover::after {
+  transform: scale(1);
+}
+
+.google__btn#google-sign-out__btn {
+  background: red;
+}
